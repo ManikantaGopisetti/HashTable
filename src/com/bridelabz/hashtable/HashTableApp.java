@@ -4,7 +4,7 @@ public class HashTableApp {
 
 	public static void main(String[] args) {
 
-		String string = "To be or not to be";
+		String string = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 		String[] words = string.split(" ");
 
 		LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
@@ -20,6 +20,6 @@ public class HashTableApp {
 			}
 			linkedHashMap.put(word, value);
 		}
-		System.out.println(linkedHashMap);
+		System.out.println(linkedHashMap.get("paranoid"));
 	}
 }
