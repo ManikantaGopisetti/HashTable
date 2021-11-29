@@ -50,4 +50,8 @@ public class MyMapNode<K, V> implements Inode<K> {
 		return "MyMapNode [key=" + key + ", value=" + value + "]";
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> hash_table_uc2
