@@ -2,25 +2,28 @@ package com.bridelabz.hashtable;
 
 public class HashTableApp {
 
-	public static void main(String[] args) {
+	
 
-		String string = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
-		String[] words = string.split(" ");
+		public static void main(String[] args) {
 
-		LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
+			String string = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+			String[] words = string.split(" ");
 
-		for (int i = 0; i < words.length; i++) {
+			LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
 
-			String word = words[i];
-			Integer value = linkedHashMap.get(word);
-			if (value == null) {
-				value = 1;
-			} else {
-				value += 1;
+			for (int i = 0; i < words.length; i++) {
+
+				String word = words[i];
+				Integer value = linkedHashMap.get(word);
+				if (value == null) {
+					value = 1;
+				} else {
+					value += 1;
+				}
+				linkedHashMap.put(word, value);
 			}
-			linkedHashMap.put(word, value);
+			System.out.println(linkedHashMap);
+			linkedHashMap.remove("avoidable");
+			System.out.println(linkedHashMap.get("avoidable"));
 		}
-
-		System.out.println(linkedHashMap.get("paranoid"));
 	}
-}
